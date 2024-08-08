@@ -1,0 +1,77 @@
+@use 'styles/_colors' as colors;
+@use 'styles/_breakpoints' as breakpoints;
+
+@use 'styles/_mixins' as mixins;
+
+.thirdSectionContentWrapper {
+  padding-bottom: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+
+  @include mixins.responsive(breakpoints.$breakpoint-xs) {
+    padding-bottom: 56px;
+  }
+
+  @include mixins.responsive(620px) {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+.thirdSectionTitle {
+  @include mixins.headline-3;
+  align-self: flex-end;
+
+  @include mixins.responsive(breakpoints.$breakpoint-xs) {
+    @include mixins.headline-5;
+    align-self: unset;
+  }
+
+  @include mixins.responsive(620px) {
+    grid-row-start: 2;
+    text-align: center;
+  }
+}
+
+.thirdSectionDescription {
+  @include mixins.body-16;
+  padding-top: 16px;
+  color: colors.$dark-gray-color;
+  white-space: pre-wrap;
+
+  @include mixins.responsive(breakpoints.$breakpoint-xs) {
+    padding-top: 15px;
+  }
+
+  @include mixins.responsive(620px) {
+    padding-top: 0;
+    grid-row-start: 3;
+    text-align: center;
+  }
+
+  @include mixins.responsive(breakpoints.$breakpoint-mobile) {
+    padding-top: 27px;
+  }
+}
+
+.thirdSectionImage {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  grid-row: 1 / 3;
+  grid-column: 2;
+  background-image: url('/assets/home/cool-third-block/truck.png');
+  background-position: center;
+  background-size: contain;
+
+  @include mixins.responsive(620px) {
+    margin: 0 0 7px;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  @include mixins.responsive(breakpoints.$breakpoint-mobile) {
+    margin-bottom: 27px;
+  }
+}

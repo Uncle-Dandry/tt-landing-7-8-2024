@@ -14,6 +14,7 @@ interface ContentLayoutClassesProps {
 
 interface ContentLayoutProps {
   classes?: ContentLayoutClassesProps;
+  id?: string;
   component?: keyof JSX.IntrinsicElements;
   children: ReactNode;
 }
@@ -23,11 +24,15 @@ const ContentLayout: FC<ContentLayoutProps> = ({
     root = '',
     content = '',
   } = {},
+  id,
   component: Component = 'div',
   children,
 }) => {
   return (
-    <Component className={classNames(styles.contentRoot, root)}>
+    <Component
+      className={classNames(styles.contentRoot, root)}
+      id={id}
+    >
       <div className={classNames(styles.contentWrapper, content)}>
         {children}
       </div>

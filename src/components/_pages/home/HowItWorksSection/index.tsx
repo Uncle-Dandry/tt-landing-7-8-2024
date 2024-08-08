@@ -18,6 +18,7 @@ const HowItWorksSection: FC = () => {
         root: styles.howItWorksSectionRoot,
         content: styles.howItWorksSectionContentWrapper,
       }}
+      id="about"
       component="section"
     >
       <h2 className={styles.howItWorksSectionTitle}>
