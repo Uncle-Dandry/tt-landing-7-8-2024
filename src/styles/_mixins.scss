@@ -1,94 +1,79 @@
+// center content
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+// responsive media
 @mixin responsive($breakpoint) {
   @media (max-width: $breakpoint) {
     @content;
   }
 }
 
-@mixin headline-1 {
-  font-family: Graphik LCG;
-  font-size: 52px;
-  font-weight: 600;
-  line-height: 64px;
-  text-align: center;
-}
-
-@mixin headline-2 {
-  font-family: Graphik LCG;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 56px;
-  text-align: left;
-}
-
-@mixin headline-3 {
-  font-family: Graphik LCG;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 40px;
-  text-align: left;
-}
-
-@mixin headline-4 {
-  font-family: Graphik LCG;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 32px;
-  text-align: left;
-}
-
-@mixin headline-5 {
-  font-family: Graphik LCG;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
-  text-align: left;
-}
-
-@mixin headline-6 {
-  font-family: Graphik LCG;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  text-align: left;
-}
-
-@mixin caption-12 {
-  font-family: Graphik LCG;
-  font-size: 12px;
+%font-weight-400 {
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.12em;
   text-align: left;
+}
+
+// headlines
+@mixin headline($size, $line-height, $align: left) {
+  font-weight: 600;
+  font-size: $size;
+  line-height: $line-height;
+  text-align: $align;
+}
+
+// body text
+@mixin body($size, $line-height) {
+  @extend %font-weight-400;
+  font-size: $size;
+  line-height: $line-height;
 }
 
 @mixin body-18 {
-  font-family: Graphik LCG;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 32px;
-  text-align: left;
+  @include body(18px, 32px);
 }
 
 @mixin body-16 {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 32px;
+  @include body(16px, 28px);
 }
 
 @mixin body-14 {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 32px;
+  @include body(14px, 24px);
 }
 
 @mixin body-12 {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 32px;
+  @include body(12px, 16px);
+}
+
+// caption text
+@mixin caption-12 {
+  @extend %font-weight-400;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.12em;
+}
+
+// body-bold text
+@mixin body-bold($size, $line-height) {
+  @include body($size, $line-height);
+  font-weight: 600;
+}
+
+@mixin body-bold-18 {
+  @include body-bold(18px, 32px);
+}
+
+@mixin body-bold-16 {
+  @include body-bold(16px, 28px);
+}
+
+@mixin body-bold-14 {
+  @include body-bold(14px, 24px);
+}
+
+@mixin body-bold-12 {
+  @include body-bold(12px, 16px);
 }

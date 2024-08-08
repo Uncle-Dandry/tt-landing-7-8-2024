@@ -1,4 +1,7 @@
+@import 'colors';
+@import 'breakpoints';
 @import 'variables';
+
 @import 'mixins';
 
 * {
@@ -10,11 +13,11 @@
 }
 
 html {
-  background-color: $light-color;
+  background-color: $white-color;
 }
 
 body {
-  color: $dark-color;
+  color: $blackcolor;
   overflow-x: hidden !important;
 }
 
@@ -34,24 +37,27 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus,
 select:-webkit-autofill:active {
-  color: $dark-color !important;
-  caret-color: $dark-color;
+  color: $blackcolor !important;
+  caret-color: $pure-black-color;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: $dark-color;
+  -webkit-text-fill-color: $blackcolor;
   transition: background-color 5000000s ease-in-out 0s;
 }
 
+a {
+  text-decoration: none;
+}
+
 a[href^=tel] {
-  text-decoration:inherit;
+  text-decoration: inherit;
   color: inherit;
 }
 
-h1 {
-  //styleName: Headline 1;
-  font-family: Graphik LCG;
-  font-size: 52px;
-  font-weight: 600;
-  line-height: 64px;
-  text-align: left;
+button {
+  font-family: $font-family;
+  color: inherit;
+  border: none;
+  background: transparent;
+  transition: opacity 0.3s;
 }

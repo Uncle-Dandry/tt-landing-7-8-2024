@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
-}
+@use 'styles/colors' as colors;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@use 'styles/mixins' as mixins;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.burger-icon {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 12px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: colors.$white-color;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.cross-icon {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 12px;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: colors.$blackcolor;
+    transform-origin: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+@for $i from 1 through 6 {
+  .headline-#{$i} {
+    @if $i == 1 {
+      @include mixins.headline(52px, 64px, center);
+    } @else if $i == 2 {
+      @include mixins.headline(40px, 56px);
+    } @else if $i == 3 {
+      @include mixins.headline(32px, 40px);
+    } @else if $i == 4 {
+      @include mixins.headline(24px, 32px);
+    } @else if $i == 5 {
+      @include mixins.headline(20px, 24px);
+    } @else {
+      @include mixins.headline(16px, 24px);
+    }
   }
 }
