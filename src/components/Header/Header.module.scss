@@ -6,7 +6,7 @@
 
 .headerRoot {
   height: 80px;
-  background-color: colors.$primary-color;
+  z-index: 10;
 
   &.active {
     background-color: colors.$white-color;

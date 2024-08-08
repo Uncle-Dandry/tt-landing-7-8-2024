@@ -12,11 +12,6 @@
   }
 }
 
-%font-weight-400 {
-  font-weight: 400;
-  text-align: left;
-}
-
 // headlines
 @mixin headline($size, $line-height, $align: left) {
   font-weight: 600;
@@ -25,9 +20,34 @@
   text-align: $align;
 }
 
+@mixin headline-1 {
+  @include headline(52px, 64px, center);
+}
+
+@mixin headline-2 {
+  @include headline(40px, 56px);
+}
+
+@mixin headline-3 {
+  @include headline(32px, 40px);
+}
+
+@mixin headline-4 {
+  @include headline(24px, 32px);
+}
+
+@mixin headline-5 {
+  @include headline(20px, 24px);
+}
+
+@mixin headline-6 {
+  @include headline(16px, 24px);
+}
+
 // body text
 @mixin body($size, $line-height) {
-  @extend %font-weight-400;
+  font-weight: 400;
+  text-align: left;
   font-size: $size;
   line-height: $line-height;
 }
@@ -50,7 +70,8 @@
 
 // caption text
 @mixin caption-12 {
-  @extend %font-weight-400;
+  font-weight: 400;
+  text-align: left;
   font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.12em;
