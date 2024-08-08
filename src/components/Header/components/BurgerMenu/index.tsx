@@ -6,9 +6,9 @@ import React, {
 import { useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 
-import { PUBLIC_SITE_URL } from 'constants/app';
-
 import { HEADER_LINKS } from 'components/Header/Header.constants';
+
+import arrowIconSrc from 'assets/icons/arrow-small-right.svg';
 
 import styles from './BurgerMenu.module.scss';
 
@@ -57,7 +57,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({
                 <img
                   loading="lazy"
                   alt="Arrow right icon"
-                  src={`${PUBLIC_SITE_URL}/assets/icons/arrow-small-right.svg`}
+                  src={arrowIconSrc}
                 />
               </span>
             </li>

@@ -3,12 +3,17 @@ import React, {
   memo,
 } from 'react';
 
+import {
+  HowItWorksSection,
+  MainSection,
+} from 'components/_pages/home';
+
 const HomePage: FC = () => {
   return (
     <>
-      {/* <MainSection /> */}
+      <MainSection />
 
-      {/* <HowItWorksSection /> */}
+      <HowItWorksSection />
 
       {/* <CoolThirdSection /> */}
 
