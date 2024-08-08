@@ -1,0 +1,29 @@
+@use 'styles/_colors' as colors;
+
+@use 'styles/_mixins' as mixins;
+
+.mainMenuRoot {
+  display: flex;
+}
+
+.mainMenu {
+  margin-right: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  gap: 24px;
+}
+
+.mainMenuItem {
+  @include mixins.flex-center;
+  @include mixins.body-16;
+  width: 100%;
+  padding: 8px 0;
+  color: colors.$white-color;
+
+  &:is(:hover, :focus-within) {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}

@@ -1,0 +1,61 @@
+@use 'styles/_colors' as colors;
+@use 'styles/_variables' as variables;
+
+@use 'styles/_mixins' as mixins;
+
+.burgerMenuRoot {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  left: 0;
+  bottom: unset;
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: none;
+  overflow: hidden;
+  z-index: variables.$z-index-burger;
+
+  &.active {
+    display: block;
+    overflow: auto;
+  }
+}
+
+.burgerMenu {
+  width: 100%;
+}
+
+.burgerMenuItemLink {
+  display: block;
+  border-top: 1px solid colors.$light-gray-color;
+
+  &:last-of-type {
+    border-bottom: 1px solid colors.$light-gray-color;
+  }
+}
+
+.burgerMenuItem {
+  height: 32px;
+  margin: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.burgerMenuItemIconWrapper {
+  width: 24px;
+  height: 24px;
+  display: block;
+  align-self: center;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.burgerMenuItemText {
+  @include mixins.body-18;
+  color: colors.$gray-color;
+}
