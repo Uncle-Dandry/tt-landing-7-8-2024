@@ -71,7 +71,7 @@ const Header: FC = () => {
           <img
             loading="lazy"
             alt="Logotype"
-            src={`${PUBLIC_SITE_URL}/assets/main/logo.svg`}
+            src={`${PUBLIC_SITE_URL}/assets/main/logo${openBurger ? '-mobile' : ''}.svg`}
           />
         </a>
 

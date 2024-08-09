@@ -14,8 +14,9 @@ const sendContactScheme = yup.object({
     .required('Введите номер')
     .matches(PhoneRegex, 'Неверный номер'),
   agree: yup
-    .boolean()
-    .required('Соглашайся'),
+    .bool()
+    .required()
+    .oneOf([true], 'Соглашайся'),
 });
 
 export default sendContactScheme;

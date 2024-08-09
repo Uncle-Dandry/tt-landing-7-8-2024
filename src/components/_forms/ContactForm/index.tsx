@@ -18,6 +18,7 @@ import { trimFormValues } from 'utils';
 import { sendContact as sendContactScheme } from 'utils/_schemes';
 
 import { useAppDispatch } from 'store';
+import { sendContactData } from 'store/components';
 
 import { Checkbox, TextField } from 'components/_controls';
 import { Button } from 'components/_controls/_buttons';
@@ -39,6 +40,8 @@ const ContactForm: FC<ContactFormProps> = ({
   className = '',
   id,
 }) => {
+  const dispatch = useAppDispatch();
+
   const formContext = useForm<ContactFormData>({
     resolver: yupResolver(sendContactScheme),
     defaultValues: CONTACT_FORM_DEFAULT,
@@ -55,8 +58,10 @@ const ContactForm: FC<ContactFormProps> = ({
   const handleSubmitForm = useCallback(
     async (values: ContactFormData) => {
       const trimmedValues = trimFormValues(values);
+
+      dispatch(sendContactData(trimmedValues));
     },
-    [],
+    [dispatch],
   );
 
   return (
@@ -91,6 +96,7 @@ const ContactForm: FC<ContactFormProps> = ({
                   <Checkbox
                     {...field}
                     error={Boolean(error?.message)}
+                    value={value as boolean}
                     label={placeholder}
                     helperText={error?.message || ''}
                   />

@@ -1,4 +1,7 @@
-import { type PayloadAction, createSlice } from '@reduxjs/toolkit';
+import {
+  createAsyncThunk,
+  createSlice,
+} from '@reduxjs/toolkit';
 
 import { Contact } from 'types';
 
@@ -7,17 +10,44 @@ const initialState: Contact = {
   phone: '',
 };
 
+export const sendContactData = createAsyncThunk(
+  'contact/sendContactData',
+  async (contact: Contact, { rejectWithValue }) => {
+    try {
+      const response = await fetch('/api/contacts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contact),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send contact data');
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error: unknown) {
+      return rejectWithValue(error);
+    }
+  },
+);
+
 const contactSlice = createSlice({
   name: 'contact',
   initialState,
-  reducers: {
-    saveContact: (state, action: PayloadAction<Contact>) => {
-      state.name = action.payload.name;
-      state.phone = action.payload.phone;
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(sendContactData.fulfilled, (state, action) => {
+        state.name = action.payload.name;
+        state.phone = action.payload.phone;
+      })
+      .addCase(sendContactData.rejected, (state, action) => {
+        console.error(action.payload);
+      });
   },
 });
-
-export const { saveContact } = contactSlice.actions;
 
 export default contactSlice.reducer;

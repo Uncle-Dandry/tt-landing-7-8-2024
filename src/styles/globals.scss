@@ -14,6 +14,7 @@
 
 html {
   background-color: $white-color;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -60,4 +61,158 @@ button {
   border: none;
   background: transparent;
   transition: opacity 0.3s;
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-Thin.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-Thin.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-Thin.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-Thin.eot');
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-ThinItalic.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-ThinItalic.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-ThinItalic.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-ThinItalic.eot');
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-Regular.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-Regular.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-Regular.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-Regular.eot');
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-RegularItalic.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-RegularItalic.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-RegularItalic.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-RegularItalic.eot');
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-Medium.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-Medium.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-Medium.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-Medium.eot');
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-MediumItalic.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-MediumItalic.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-MediumItalic.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-MediumItalic.eot');
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-Semibold.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-Semibold.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-Semibold.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-Semibold.eot');
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-SemiboldItalic.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-SemiboldItalic.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-SemiboldItalic.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-SemiboldItalic.eot');
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-Bold.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-Bold.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-Bold.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-Bold.eot');
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-BoldItalic.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-BoldItalic.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-BoldItalic.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-BoldItalic.eot');
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-Super.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-Super.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-Super.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-Super.eot');
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-SuperItalic.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-SuperItalic.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-SuperItalic.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-SuperItalic.eot');
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-Extralight.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-Extralight.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-Extralight.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-Extralight.eot');
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url('/assets/fonts/GraphikLCG-ExtralightItalic.woff2') format('woff2'),
+       url('/assets/fonts/GraphikLCG-ExtralightItalic.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-ExtralightItalic.ttf') format('truetype'),
+       url('/assets/fonts/GraphikLCG-ExtralightItalic.eot');
 }

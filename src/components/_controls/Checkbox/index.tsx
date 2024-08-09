@@ -25,8 +25,8 @@ const Checkbox: FC<CheckboxProps> = ({
   disabled = false,
   error = false,
   value = false,
-  label,
   helperText = '',
+  label,
   onChange,
 }) => {
   const checkboxId = useId();
@@ -34,8 +34,6 @@ const Checkbox: FC<CheckboxProps> = ({
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange(event?.target?.checked);
   };
-
-  console.log(value);
 
   return (
     <div
@@ -60,19 +58,35 @@ const Checkbox: FC<CheckboxProps> = ({
           onChange={handleChange}
         />
 
-        <span className="checkmark">
+        <span
+          className={classNames(
+            'checkmark',
+            styles.checkboxCheckmark,
+            { [styles.checked]: value },
+          )}
+        >
           <img
             alt="Checkmark"
             src={checkmarkSrc}
           />
         </span>
 
-        <span className="checkbox-text">
+        <span
+          className={classNames(
+            'checkbox-text',
+            styles.checkboxText,
+          )}
+        >
           {label}
         </span>
 
         {error && helperText && (
-          <span className="helper-text">
+          <span
+            className={classNames(
+              'helper-text',
+              styles.checkboxHelperText,
+            )}
+          >
             {helperText}
           </span>
         )}
