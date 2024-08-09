@@ -1,0 +1,62 @@
+@use 'styles/_colors' as colors;
+@use 'styles/_breakpoints' as breakpoints;
+
+@use 'styles/_mixins' as mixins;
+
+.pollsSection {
+  &Root {
+    background-color: colors.$extra-light-gray-color;
+  }
+
+  &ContentWrapper {
+    max-width: 1008px;
+    padding: 68px 0 67px;
+    display: flex;
+    flex-direction: column;
+  
+    @include mixins.responsive(breakpoints.$breakpoint-xs) {
+      padding: 20px 0 32px;
+    }
+
+    @include mixins.responsive(620px) {
+      padding: 20px 0 21px;
+    }
+
+    @include mixins.responsive(breakpoints.$breakpoint-mobile) {
+      padding: 16px 0 19px;
+    }
+  }
+
+  &List {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 32px;
+
+    @include mixins.responsive(breakpoints.$breakpoint-xs) {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+  }
+
+  &PollBlock {
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
+
+    @include mixins.responsive(breakpoints.$breakpoint-xs) {
+      row-gap: 46px;
+    }
+
+    @include mixins.responsive(breakpoints.$breakpoint-mobile) {
+      row-gap: 14px;
+    }
+  }
+
+  &Title {
+    @include mixins.body-bold-18;
+  }
+
+  &Description {
+    @include mixins.body-16;
+  }
+}

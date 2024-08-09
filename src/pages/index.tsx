@@ -7,6 +7,7 @@ import {
   FAQSection,
   HowItWorksSection,
   MainSection,
+  PollsSection,
   ReviewsSection,
   ThirdSection,
 } from 'components/_pages/home';
@@ -24,7 +25,7 @@ const HomePage: FC = () => {
 
       <FAQSection />
 
-      {/* <SurveySection /> */}
+      <PollsSection />
 
       {/* <ContactForm /> */}
     </>
