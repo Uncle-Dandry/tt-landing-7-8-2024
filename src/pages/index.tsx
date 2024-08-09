@@ -4,6 +4,7 @@ import React, {
 } from 'react';
 
 import {
+  ContactSection,
   FAQSection,
   HowItWorksSection,
   MainSection,
@@ -27,7 +28,7 @@ const HomePage: FC = () => {
 
       <PollsSection />
 
-      {/* <ContactForm /> */}
+      <ContactSection />
     </>
   );
 };

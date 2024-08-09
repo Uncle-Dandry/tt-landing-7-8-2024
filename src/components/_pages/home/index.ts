@@ -1,3 +1,4 @@
+export { default as ContactSection } from './ContactSection';
 export { default as FAQSection } from './FAQSection';
 export { default as HowItWorksSection } from './HowItWorksSection';
 export { default as MainSection } from './MainSection';

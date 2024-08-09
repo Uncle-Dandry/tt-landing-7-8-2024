@@ -1,66 +1,106 @@
-.container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  transition: border-color 0.3s ease;
+@use 'styles/_colors' as colors;
+@use 'styles/_breakpoints' as breakpoints;
 
-  &.filled {
-    border-color: #007bff;
-  }
+@use 'styles/_mixins' as mixins;
 
-  .input {
-    border: none;
-    outline: none;
-    flex: 1;
-    padding: 0;
-    font-size: 1rem;
-    background: transparent;
-  }
+%active-label {
+  @include mixins.body-14;
+  top: 8px;
+  color: colors.$gray-color;
+  background: transparent;
+  transform: unset;
+}
 
-  .label {
-    position: absolute;
-    top: 50%;
-    left: 1rem;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-    pointer-events: none;
-    background: white;
-    padding: 0 0.25rem;
-    font-size: 0.75rem;
-    color: #666;
-  }
+.textField {
+  &Wrapper {
+    position: relative;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    background-color: colors.$extra-light-gray-color;
+    border: 1px solid colors.$extra-light-gray-color;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
 
-  .input:focus ~ .label,
-  &.filled .label {
-    top: -0.75rem;
-    left: 0.75rem;
-    font-size: 0.75rem;
-    color: #007bff;
-  }
+    &.filled {
+      color: colors.$blackcolor;
+      background: transparent;
+      border-color: colors.$light-gray-color;
 
-  .icon {
-    margin-left: 0.5rem;
-    width: 20px;
-    height: 20px;
-    visibility: hidden;
+      .label {
+        @extend %active-label;
+      }
+    }
 
     &.invalid {
-      visibility: visible;
-      color: #dc3545; // красный цвет для ошибки
-    }
-
-    &.valid {
-      visibility: visible;
-      color: #28a745; // зеленый цвет для успеха
+      border-color: colors.$dangerous-color;
     }
   }
 
-  .helperText {
-    color: #dc3545;
-    font-size: 0.75rem;
-    margin-top: 0.25rem;
+  &Container {
+    position: static;
+    width: 100%;
+    height: 100%;
+    padding: 8px 16px 4px;
+    display: flex;
+    align-items: center;
+
+    .input {
+      @include mixins.body-18;
+      top: 10px;
+      padding: 0;
+      flex: 1;
+      font-size: 1rem;
+      background: transparent;
+      border: none;
+      outline: none;
+  
+      &:focus {
+        color: colors.$blackcolor;
+      }
+    }
+  
+    .label {
+      @include mixins.body-18;
+      position: absolute;
+      top: 50%;
+      text-align: unset;
+      color: colors.$dark-gray-color;
+      background: colors.$extra-light-gray-color;
+      transform: translateY(-50%);
+      transition: top 0.3s ease, background 0.3s ease;
+      pointer-events: none;
+    }
+  
+    .input:focus ~ .label,
+    &.filled .label {
+      @extend %active-label;
+    }
+  
+    .icon {
+      margin-left: 0.5rem;
+      width: 20px;
+      height: 20px;
+      visibility: hidden;
+  
+      &.invalid {
+        visibility: visible;
+        color: colors.$dangerous-color;
+      }
+  
+      &.valid {
+        visibility: visible;
+      }
+    }
+  }
+
+  &HelperText {
+    @include mixins.body-12;
+    position: absolute;
+    left: 0;
+    bottom: -21px;
+    margin-top: 5px;
+    color: colors.$dangerous-color;
   }
 }

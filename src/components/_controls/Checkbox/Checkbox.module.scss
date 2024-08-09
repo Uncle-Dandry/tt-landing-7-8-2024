@@ -1,0 +1,62 @@
+@use 'styles/_colors' as colors;
+@use 'styles/_breakpoints' as breakpoints;
+
+@use 'styles/_mixins' as mixins;
+
+.Checkbox {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkmark {
+    @include mixins.flex-center;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: 2px solid colors.$mid-gray-color;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+    svg {
+      width: 16x;
+      height: 12px;
+      fill: #fff;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+  }
+
+  .checkbox-text {
+    @include mixins.body-16;
+  }
+
+  .helper-text {
+    @include mixins.body-12;
+    margin-top: 5px;
+    display: block;
+    color: colors.$dangerous-color;
+  }
+
+  input:checked ~ .checkmark {
+    background-color: colors.$primary-color;
+    border-color: colors.$primary-color;
+
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &:hover input ~ .checkmark {
+    border-color: colors.$primary-color;
+  }
+}

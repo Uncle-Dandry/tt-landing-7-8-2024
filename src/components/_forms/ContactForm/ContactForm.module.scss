@@ -1,0 +1,38 @@
+@use 'styles/_colors' as colors;
+@use 'styles/_breakpoints' as breakpoints;
+
+@use 'styles/_mixins' as mixins;
+
+.contactForm {
+  &Container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  
+    @include mixins.responsive(breakpoints.$breakpoint-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &Title {
+    @include mixins.headline-2;
+    margin-bottom: 44px;
+  
+    @include mixins.responsive(breakpoints.$breakpoint-xs) {
+      margin-bottom: 32px;
+    }
+  
+    @include mixins.responsive(620px) {
+      @include mixins.headline-4;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  &SubmitButton {
+    @include mixins.headline-5;
+    padding: 0 5px;
+    justify-content: center;
+    text-align: center;
+  }
+}
