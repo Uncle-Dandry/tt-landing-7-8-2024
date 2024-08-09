@@ -15,10 +15,6 @@
     column-gap: 16px;
     flex-basis: calc(50% - 16px);
   }
-
-  @include mixins.responsive(breakpoints.$breakpoint-mobile) {
-
-  }
 }
 
 .howItWorksItemIcon {

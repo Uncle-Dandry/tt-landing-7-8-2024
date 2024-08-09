@@ -3,11 +3,11 @@ import React, {
   memo,
 } from 'react';
 
-import type { HIW_ELEMENT } from '../../HowItWorksSection.constants';
+import type { HIWElement } from '../../HowItWorksSection.constants';
 
 import styles from './HowItWorksItem.module.scss';
 
-const HowItWorksItem: FC<HIW_ELEMENT> = ({
+const HowItWorksItem: FC<HIWElement> = ({
   label,
   description,
   iconAlt,

@@ -5,6 +5,10 @@ import {
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import store from 'store';
 
 import { HOME_PAGE } from 'constants/routes';

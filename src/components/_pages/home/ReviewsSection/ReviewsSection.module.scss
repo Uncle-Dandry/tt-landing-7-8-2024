@@ -1,0 +1,121 @@
+@use 'styles/_colors' as colors;
+@use 'styles/_breakpoints' as breakpoints;
+
+@use 'styles/_mixins' as mixins;
+
+.reviewsSectionRoot {
+  height: 100%;
+  background: colors.$extra-light-gray-color;
+}
+
+.reviewsSectionContentWrapper {
+  padding: 57px 0 61px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mixins.responsive(breakpoints.$breakpoint-xs) {
+    padding-top: 33px;
+  }
+
+  @include mixins.responsive(breakpoints.$breakpoint-mobile) {
+    padding: 27px 0 53px;
+  }
+}
+
+.reviewsSectionTitle {
+  @include mixins.headline-2;
+  margin-bottom: 61px;
+
+  @include mixins.responsive(breakpoints.$breakpoint-xs) {
+    margin-bottom: 42px;
+  }
+
+  @include mixins.responsive(620px) {
+    @include mixins.headline-4;
+    margin-bottom: 26px;
+    text-align: center;
+  }
+}
+
+.reviewsSectionSwiperContainer {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 64px;
+
+  @include mixins.responsive(1216px) {
+    max-width: calc(100vw - 40px);
+  }
+
+  @include mixins.responsive(breakpoints.$breakpoint-xs) {
+    max-width: calc(100vw - 34px);
+    padding: 0;
+  }
+
+  @include mixins.responsive(breakpoints.$breakpoint-mobile) {
+    max-width: calc(100vw - 32px);
+  }
+}
+
+.reviewsSectionSwiperWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.reviewsSectionSwiper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.reviewsSectionSwiperInnerWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.reviewsSectionSwiperSlide {
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  align-items: stretch;
+  align-self: stretch;
+  justify-content: center;
+}
+
+.reviewsSectionSwiperPagination {
+  bottom: auto !important;
+
+  & > span {
+    margin: 0 17px 0 0 !important;
+  }
+}
+
+.reviewsSectionSwiperNavButton {
+  top: calc(50% - 25px) !important;
+  width: 15px;
+  height: 32px;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+
+  @include mixins.responsive(breakpoints.$breakpoint-xs) {
+    display: none !important;
+  }
+
+  &::after {
+    width: 15px;
+    height: 32px;
+  }
+
+  &:global(.swiper-button-disabled) {
+    opacity: 1;
+  
+    &::after {
+      width: 15px;
+      height: 32px;
+      color: colors.$mid-gray-color;
+    }
+  }
+}

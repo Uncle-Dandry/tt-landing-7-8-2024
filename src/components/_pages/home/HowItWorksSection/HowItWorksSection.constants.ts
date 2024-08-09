@@ -3,14 +3,14 @@ import iconSrcTruck from 'assets/home/how-it-works/delivery-truck.svg';
 import iconSrcSecure from 'assets/home/how-it-works/secure.svg';
 import iconSrcBag from 'assets/home/how-it-works/money-bags.svg';
 
-export interface HIW_ELEMENT {
+export interface HIWElement {
   iconSrc: string;
   iconAlt: string;
   label: string;
   description: string;
 }
 
-export const HIW_LIST: HIW_ELEMENT[] = [
+export const HIW_LIST: HIWElement[] = [
   {
     iconSrc: iconSrcWaiting,
     iconAlt: 'Waiting',

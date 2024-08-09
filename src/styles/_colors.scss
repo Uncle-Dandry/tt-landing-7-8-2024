@@ -9,7 +9,12 @@ $dark-gray-color: #5E646A;
 $gray-color: #83898F;
 $mid-gray-color: #C2C8CD;
 $light-gray-color: #ECEFF2;
-$extralight-gray-color: #F6F8FA;
+$extra-light-gray-color: #F6F8FA;
 
 $dangerous-color: #F13636;
 $green-success-color: #25CD82;
+
+:root {
+  --swiper-theme-color: #2A6CEA;
+  --swiper-pagination-bullet-inactive: #C2C8CD;
+}

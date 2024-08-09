@@ -6,6 +6,7 @@ import React, {
 import {
   HowItWorksSection,
   MainSection,
+  ReviewsSection,
   ThirdSection,
 } from 'components/_pages/home';
 
@@ -18,7 +19,7 @@ const HomePage: FC = () => {
 
       <ThirdSection />
 
-      {/* <ReviewsSection /> */}
+      <ReviewsSection />
 
       {/* <FAQSection /> */}
 
