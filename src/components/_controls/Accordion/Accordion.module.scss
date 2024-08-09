@@ -1,0 +1,61 @@
+@use 'styles/_colors' as colors;
+@use 'styles/_breakpoints' as breakpoints;
+
+@use 'styles/_mixins' as mixins;
+
+.accordion {
+  width: 100%;
+  padding: 24px 0;
+  overflow: hidden;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid colors.$light-gray-color;
+  }
+
+  &Summary {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s;
+    cursor: pointer;
+
+    &:is(:hover, :focus-within) {
+      color: colors.$primary-color;
+      
+      .accordionIcon {
+        background-color: colors.$primary-color;
+      }
+    }
+  }
+
+  &Title {
+    @include mixins.body-bold-18;
+    padding-right: 10px;
+  }
+
+  &Icon {
+    width: 24px;
+    height: 24px;
+    background-color: colors.$blackcolor;
+    mask: url(/assets/icons/expand.svg) no-repeat center;
+    mask-size: contain;
+
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+
+    &.open {
+      transform: rotate(45deg);
+    }
+  }
+
+  &Content {
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+
+    &.open {
+      max-height: 500px;
+      transition: max-height 0.3s ease-in;
+    }
+  }
+}

@@ -4,6 +4,7 @@ import React, {
 } from 'react';
 
 import {
+  FAQSection,
   HowItWorksSection,
   MainSection,
   ReviewsSection,
@@ -21,7 +22,7 @@ const HomePage: FC = () => {
 
       <ReviewsSection />
 
-      {/* <FAQSection /> */}
+      <FAQSection />
 
       {/* <SurveySection /> */}
 
