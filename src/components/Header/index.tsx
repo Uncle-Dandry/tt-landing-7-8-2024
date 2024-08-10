@@ -6,7 +6,7 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { HOME_PAGE } from 'constants/routes';
+import { PUBLIC_URL } from 'constants/routes';
 
 import logoSrc from 'assets/main/logo.svg';
 import logoMobileSrc from 'assets/main/logo-mobile.svg';
@@ -68,7 +68,7 @@ const Header: FC = () => {
       >
         <a
           className={styles.headerLogotypeLink}
-          href={HOME_PAGE}
+          href={PUBLIC_URL}
         >
           <img
             loading="lazy"

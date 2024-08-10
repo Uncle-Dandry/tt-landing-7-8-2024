@@ -1,4 +1,4 @@
-import { HOME_PAGE } from 'constants/routes';
+import { PUBLIC_URL } from 'constants/routes';
 
 interface HeaderLink {
   label: string;
@@ -10,18 +10,18 @@ export const BURGER_MENU_RESOLUTION = '768';
 export const HEADER_LINKS: HeaderLink[] = [
   {
     label: 'Как это работает',
-    link: `${HOME_PAGE}#about`,
+    link: `${PUBLIC_URL}#about`,
   },
   {
     label: '3-й блок',
-    link: `${HOME_PAGE}#third`,
+    link: `${PUBLIC_URL}#third`,
   },
   {
     label: 'Вопросы и ответы',
-    link: `${HOME_PAGE}#faq`,
+    link: `${PUBLIC_URL}#faq`,
   },
   {
     label: 'Форма',
-    link: `${HOME_PAGE}#form`,
+    link: `${PUBLIC_URL}#form`,
   },
 ];
