@@ -21,20 +21,19 @@ import 'styles/globals.scss';
 
 import './App.scss';
 
+const basename = process.env?.REACT_APP_PUBLIC_URL || '/';
+
 const router = createBrowserRouter(
   [{
-    path: HOME_PAGE,
+    path: basename,
     element: <MainLayout />,
     children: [
       {
-        path: '',
+        path: HOME_PAGE,
         element: <HomePage />,
       },
     ],
   }],
-  {
-    basename: process.env.REACT_APP_PUBLIC_URL || '/',
-  },
 );
 
 const App = () => {
