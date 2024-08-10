@@ -21,8 +21,8 @@ import 'styles/globals.scss';
 
 import './App.scss';
 
-const router = createBrowserRouter([
-  {
+const router = createBrowserRouter(
+  [{
     path: HOME_PAGE,
     element: <MainLayout />,
     children: [
@@ -31,8 +31,11 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
     ],
+  }],
+  {
+    basename: '/',
   },
-]);
+);
 
 const App = () => {
   return (
