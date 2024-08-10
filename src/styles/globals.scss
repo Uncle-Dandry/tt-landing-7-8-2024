@@ -55,6 +55,10 @@ a[href^=tel] {
   color: inherit;
 }
 
+li {
+  list-style: none;
+}
+
 button {
   font-family: $font-family;
   color: inherit;

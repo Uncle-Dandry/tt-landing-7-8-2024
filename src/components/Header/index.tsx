@@ -82,6 +82,7 @@ const Header: FC = () => {
           >
             <button
               className={styles.headerOpenBurgerButton}
+              aria-label="burger-button"
               type="button"
               onClick={toggleOpenBurger}
             >

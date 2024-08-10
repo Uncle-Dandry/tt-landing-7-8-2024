@@ -3,6 +3,7 @@ import React, {
   type FC,
   type FocusEvent,
   useState,
+  useId,
   memo,
 } from 'react';
 
@@ -29,6 +30,8 @@ const TextField: FC<TextFieldProps> = ({
 }) => {
   const [focused, setFocused] = useState<boolean>(false);
 
+  const textFieldId = useId();
+
   const handleBlur = (event: FocusEvent<HTMLInputElement>) => {
     setFocused(false);
     onBlur(event);
@@ -52,13 +55,17 @@ const TextField: FC<TextFieldProps> = ({
         <input
           className={styles.input}
           type="text"
+          id={textFieldId}
           value={value}
           onChange={onChange}
           onBlur={handleBlur}
           onFocus={handleFocus}
         />
 
-        <label className={styles.label}>
+        <label
+          className={styles.label}
+          htmlFor={textFieldId}
+        >
           {placeholder}
         </label>
 

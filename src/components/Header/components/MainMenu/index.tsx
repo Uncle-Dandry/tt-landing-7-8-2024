@@ -22,14 +22,11 @@ const MainMenu: FC<MainMenuProps> = ({
           label,
           link,
         }) => (
-          <a
-            href={link}
-            key={label}
-          >
-            <li className={styles.mainMenuItem}>
+          <li key={label}>
+            <a className={styles.mainMenuItem} href={link}>
               {label}
-            </li>
-          </a>
+            </a>
+          </li>
         ))}
       </ul>
     </nav>

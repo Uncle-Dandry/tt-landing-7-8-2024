@@ -25,7 +25,7 @@
   width: 100%;
 }
 
-.burgerMenuItemLink {
+.burgerMenuItem {
   display: block;
   border-top: 1px solid colors.$light-gray-color;
 
@@ -34,9 +34,9 @@
   }
 }
 
-.burgerMenuItem {
-  height: 32px;
-  margin: 16px 0;
+.burgerMenuItemLink {
+  height: 64px;
+  padding: 16px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;

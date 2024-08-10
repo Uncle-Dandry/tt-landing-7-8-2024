@@ -28,15 +28,16 @@ const FAQSection: FC = () => {
           label,
           description,
         }) => (
-          <Accordion
-            className={styles.faqSectionAccordion}
-            key={label}
-            title={label}
-          >
-            <p className={styles.faqSectionAccordionText}>
-              {description}
-            </p>
-          </Accordion>
+          <li key={label}>
+            <Accordion
+              className={styles.faqSectionAccordion}
+              title={label}
+            >
+              <p className={styles.faqSectionAccordionText}>
+                {description}
+              </p>
+            </Accordion>
+          </li>
         ))}
       </ul>
     </ContentLayout>

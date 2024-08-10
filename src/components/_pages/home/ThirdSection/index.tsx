@@ -5,7 +5,7 @@ import React, {
 
 import { ContentLayout } from 'components/_layouts';
 
-import phoneManSrc from 'assets/home/cool-third-block/phone-man.png';
+import phoneManSrc from 'assets/home/cool-third-block/phone-man.webp';
 
 import styles from './ThirdSection.module.scss';
 

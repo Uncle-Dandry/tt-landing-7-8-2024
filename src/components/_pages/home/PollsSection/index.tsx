@@ -23,7 +23,7 @@ const PollsSection: FC = () => {
           title,
           description,
         }, index) => (
-          <div
+          <li
             className={styles.pollsSectionPollBlock}
             key={`${title}-${index}`}
           >
@@ -34,7 +34,7 @@ const PollsSection: FC = () => {
             <p className={styles.pollsSectionDescription}>
               {description}
             </p>
-          </div>
+          </li>
         ))}
       </ul>
     </ContentLayout>

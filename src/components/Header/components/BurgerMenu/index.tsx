@@ -42,13 +42,11 @@ const BurgerMenu: FC<BurgerMenuProps> = ({
           label,
           link,
         }) => (
-          <a
-            className={styles.burgerMenuItemLink}
-            href={link}
+          <li
+            className={styles.burgerMenuItem}
             key={label}
-            onClick={onClose}
           >
-            <li className={styles.burgerMenuItem}>
+            <a className={styles.burgerMenuItemLink} href={link} onClick={onClose}>
               <span className={styles.burgerMenuItemText}>
                 {label}
               </span>
@@ -60,8 +58,8 @@ const BurgerMenu: FC<BurgerMenuProps> = ({
                   src={arrowIconSrc}
                 />
               </span>
-            </li>
-          </a>
+            </a>
+          </li>
         ))}
       </ul>
     </div>
