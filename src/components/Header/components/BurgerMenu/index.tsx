@@ -22,9 +22,19 @@ const BurgerMenu: FC<BurgerMenuProps> = ({
 }) => {
   useEffect(
     () => {
-      onClose();
+      const handleRouteChange = () => {
+        onClose();
+      };
+
+      handleRouteChange();
+
+      window.addEventListener('popstate', handleRouteChange);
+
+      return () => {
+        window.removeEventListener('popstate', handleRouteChange);
+      };
     },
-    [window.location.pathname, onClose],
+    [onClose],
   );
 
   return (
