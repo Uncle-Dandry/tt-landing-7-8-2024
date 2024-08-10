@@ -11,7 +11,9 @@ import 'swiper/css/pagination';
 
 import store from 'store';
 
-import { HOME_PAGE } from 'constants/routes';
+// import { HOME_PAGE } from 'constants/routes';
+
+import HomePage from 'pages/index';
 
 import { MainLayout } from 'components/_layouts';
 
@@ -27,12 +29,25 @@ const router = createBrowserRouter(
     element: <MainLayout />,
     children: [
       {
-        path: HOME_PAGE,
-        element: basename,
+        path: basename,
+        element: <HomePage />,
       },
     ],
   }],
 );
+
+// const router = createHashRouter(
+//   [{
+//     path: basename,
+//     element: <MainLayout />,
+//     children: [
+//       {
+//         path: HOME_PAGE,
+//         element: <HomePage />,
+//       },
+//     ],
+//   }],
+// );
 
 const App = () => {
   return (
