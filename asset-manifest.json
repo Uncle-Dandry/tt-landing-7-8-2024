@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tt-landing-7-8-2024/static/css/main.abf729fc.css",
-    "main.js": "/tt-landing-7-8-2024/static/js/main.22f49460.js",
+    "main.css": "/tt-landing-7-8-2024/static/css/main.c398054c.css",
+    "main.js": "/tt-landing-7-8-2024/static/js/main.cb93fd88.js",
     "static/js/453.b9ba2a4b.chunk.js": "/tt-landing-7-8-2024/static/js/453.b9ba2a4b.chunk.js",
     "static/media/main-bg.webp": "/tt-landing-7-8-2024/static/media/main-bg.9c87c071b5f50ad9c4a4.webp",
     "static/media/GraphikLCG-BoldItalic.eot": "/tt-landing-7-8-2024/static/media/GraphikLCG-BoldItalic.b756b55712c56d3769ad.eot",
@@ -63,6 +63,8 @@
     "static/media/phone-man.webp": "/tt-landing-7-8-2024/static/media/phone-man.0c37f88cbbf0203ad4a4.webp",
     "static/media/money-bags.svg": "/tt-landing-7-8-2024/static/media/money-bags.c1d792a5456b351c329b7e478dc4b7da.svg",
     "static/media/delivery-truck.svg": "/tt-landing-7-8-2024/static/media/delivery-truck.bffb01e843e9e3aaf9f492b58418c0c9.svg",
+    "static/media/logo-mobile.svg": "/tt-landing-7-8-2024/static/media/logo-mobile.c1f1a612141e439ee5eaa62d40492d08.svg",
+    "static/media/logo.svg": "/tt-landing-7-8-2024/static/media/logo.621e5f4d295fa145d557fe18b1adad62.svg",
     "static/media/truck.webp": "/tt-landing-7-8-2024/static/media/truck.1a703a45a22c92ead517.webp",
     "static/media/waiting.svg": "/tt-landing-7-8-2024/static/media/waiting.512b20b5d299b7933b7447391878e7ce.svg",
     "static/media/secure.svg": "/tt-landing-7-8-2024/static/media/secure.48cce6146d17431c1b70f661c66e575c.svg",
@@ -72,12 +74,12 @@
     "static/media/cancel.svg": "/tt-landing-7-8-2024/static/media/cancel.18de4f3ac652691fd4a8995a4ae3569e.svg",
     "static/media/check-circle.svg": "/tt-landing-7-8-2024/static/media/check-circle.1d4ce332049cff2cf3201d79d0a962b0.svg",
     "static/media/checkmark.svg": "/tt-landing-7-8-2024/static/media/checkmark.cd09ddfef2a0cd33e0cb40780a7b428a.svg",
-    "main.abf729fc.css.map": "/tt-landing-7-8-2024/static/css/main.abf729fc.css.map",
-    "main.22f49460.js.map": "/tt-landing-7-8-2024/static/js/main.22f49460.js.map",
+    "main.c398054c.css.map": "/tt-landing-7-8-2024/static/css/main.c398054c.css.map",
+    "main.cb93fd88.js.map": "/tt-landing-7-8-2024/static/js/main.cb93fd88.js.map",
     "453.b9ba2a4b.chunk.js.map": "/tt-landing-7-8-2024/static/js/453.b9ba2a4b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.abf729fc.css",
-    "static/js/main.22f49460.js"
+    "static/css/main.c398054c.css",
+    "static/js/main.cb93fd88.js"
   ]
 }
