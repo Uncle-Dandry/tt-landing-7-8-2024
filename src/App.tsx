@@ -13,8 +13,6 @@ import store from 'store';
 
 import { HOME_PAGE } from 'constants/routes';
 
-import HomePage from 'pages/index';
-
 import { MainLayout } from 'components/_layouts';
 
 import 'styles/globals.scss';
@@ -30,7 +28,7 @@ const router = createBrowserRouter(
     children: [
       {
         path: HOME_PAGE,
-        element: <HomePage />,
+        element: basename,
       },
     ],
   }],
