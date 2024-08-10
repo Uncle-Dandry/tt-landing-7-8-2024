@@ -1,5 +1,4 @@
 import React, { type FC } from 'react';
-import { Outlet } from 'react-router-dom';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
@@ -17,7 +16,6 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
 
       <main>
         {children}
-        <Outlet />
       </main>
 
       <Footer />

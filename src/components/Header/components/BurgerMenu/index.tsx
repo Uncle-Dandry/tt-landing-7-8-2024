@@ -3,7 +3,6 @@ import React, {
   memo,
   useEffect,
 } from 'react';
-import { useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 
 import { HEADER_LINKS } from 'components/Header/Header.constants';
@@ -21,13 +20,11 @@ const BurgerMenu: FC<BurgerMenuProps> = ({
   open,
   onClose,
 }) => {
-  const { pathname } = useLocation();
-
   useEffect(
     () => {
       onClose();
     },
-    [pathname, onClose],
+    [window.location.pathname, onClose],
   );
 
   return (
