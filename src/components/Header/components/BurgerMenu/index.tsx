@@ -27,7 +27,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({
     () => {
       onClose();
     },
-    [pathname],
+    [pathname, onClose],
   );
 
   return (

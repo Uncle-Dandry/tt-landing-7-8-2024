@@ -3,11 +3,11 @@ import React, {
   memo,
 } from 'react';
 
-import type { Review } from '../../ReviewsSection.constants';
+import type { ReviewItem } from '../../ReviewsSection.constants';
 
 import styles from './Review.module.scss';
 
-const Review: FC<Review> = ({
+const Review: FC<ReviewItem> = ({
   avatarAlt,
   avatarSrc,
   name,

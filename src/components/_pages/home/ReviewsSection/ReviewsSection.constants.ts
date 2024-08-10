@@ -9,7 +9,7 @@ interface SwiperBreakpoints {
   [ratio: string]: SwiperProps;
 }
 
-export interface Review {
+export interface ReviewItem {
   avatarAlt: string;
   avatarSrc: string;
   name: string;
@@ -48,7 +48,7 @@ export const SWIPER_BREAKPOINTS: SwiperBreakpoints = {
   },
 };
 
-export const REVIEW_LIST: Review[] = [
+export const REVIEW_LIST: ReviewItem[] = [
   {
     avatarAlt: 'Avatar default',
     avatarSrc: avatarDefaultSrc,
