@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tt-landing-7-8-2024/static/css/main.ae20ae2a.css",
-    "main.js": "/tt-landing-7-8-2024/static/js/main.c8f14e66.js",
+    "main.js": "/tt-landing-7-8-2024/static/js/main.915e48d8.js",
     "static/js/453.b9ba2a4b.chunk.js": "/tt-landing-7-8-2024/static/js/453.b9ba2a4b.chunk.js",
     "static/media/main-bg.webp": "/tt-landing-7-8-2024/static/media/main-bg.9c87c071b5f50ad9c4a4.webp",
     "static/media/GraphikLCG-BoldItalic.eot": "/tt-landing-7-8-2024/static/media/GraphikLCG-BoldItalic.b756b55712c56d3769ad.eot",
@@ -75,11 +75,11 @@
     "static/media/check-circle.svg": "/tt-landing-7-8-2024/static/media/check-circle.1d4ce332049cff2cf3201d79d0a962b0.svg",
     "static/media/checkmark.svg": "/tt-landing-7-8-2024/static/media/checkmark.cd09ddfef2a0cd33e0cb40780a7b428a.svg",
     "main.ae20ae2a.css.map": "/tt-landing-7-8-2024/static/css/main.ae20ae2a.css.map",
-    "main.c8f14e66.js.map": "/tt-landing-7-8-2024/static/js/main.c8f14e66.js.map",
+    "main.915e48d8.js.map": "/tt-landing-7-8-2024/static/js/main.915e48d8.js.map",
     "453.b9ba2a4b.chunk.js.map": "/tt-landing-7-8-2024/static/js/453.b9ba2a4b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ae20ae2a.css",
-    "static/js/main.c8f14e66.js"
+    "static/js/main.915e48d8.js"
   ]
 }
