@@ -40,6 +40,10 @@ const router = createBrowserRouter(
 const App = () => {
   return (
     <Provider store={store}>
+      <a href={process.env.REACT_APP_PUBLIC_URL}>
+        {process.env.REACT_APP_PUBLIC_URL}
+      </a>
+
       <RouterProvider router={router} />
     </Provider>
   );
