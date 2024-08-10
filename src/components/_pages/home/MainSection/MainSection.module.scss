@@ -29,6 +29,7 @@
     position: absolute;
     inset: 0;
     top: -80px;
+    color: transparent;
     background-image: url(/assets/home/main-bg.webp);
     background-repeat: no-repeat;
     background-position: center;
@@ -40,6 +41,7 @@
     position: absolute;
     inset: 0;
     top: -80px;
+    color: transparent;
     background-color: colors.$primary-color;
     opacity: 80%;
   }

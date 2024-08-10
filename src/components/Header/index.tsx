@@ -6,8 +6,10 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { PUBLIC_SITE_URL } from 'constants/app';
 import { HOME_PAGE } from 'constants/routes';
+
+import logoSrc from 'assets/main/logo.svg';
+import logoMobileSrc from 'assets/main/logo-mobile.svg';
 
 import { useMediaQuery } from 'hooks';
 
@@ -71,7 +73,7 @@ const Header: FC = () => {
           <img
             loading="lazy"
             alt="Logotype"
-            src={`${PUBLIC_SITE_URL}/assets/main/logo${openBurger ? '-mobile' : ''}.svg`}
+            src={openBurger ? logoMobileSrc : logoSrc}
           />
         </a>
 
