@@ -2,7 +2,7 @@
   "name": "tt-landing-7-8-2024",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/tt-landing-7-8-2024",
+  "homepage": "https://uncle-dandry.github.io/tt-landing-7-8-2024",
   "scripts": {
     "start": "react-scripts start",
     "serve": "serve -s build",

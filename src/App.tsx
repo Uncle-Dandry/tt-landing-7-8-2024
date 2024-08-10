@@ -1,8 +1,4 @@
 import React from 'react';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import 'swiper/css';
@@ -21,26 +17,26 @@ import 'styles/globals.scss';
 
 import './App.scss';
 
-const router = createBrowserRouter(
-  [{
-    path: HOME_PAGE,
-    element: <MainLayout />,
-    children: [
-      {
-        path: '',
-        element: <HomePage />,
-      },
-    ],
-  }],
-  {
-    basename: '/',
-  },
-);
+// const router = createBrowserRouter(
+//   [{
+//     path: HOME_PAGE,
+//     element: <MainLayout />,
+//     children: [
+//       {
+//         path: '',
+//         element: <HomePage />,
+//       },
+//     ],
+//   }],
+//   {
+//     basename: '/',
+//   },
+// );
 
 const App = () => {
   return (
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <HomePage />
     </Provider>
   );
 };
